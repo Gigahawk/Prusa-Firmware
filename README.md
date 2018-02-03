@@ -1,5 +1,7 @@
 # Original Prusa i3 MK2 Firmware
 
+Note: pins.h has been modified in an attempt to bypass the heating circuit which seems to have failed
+
 ## General instructions
 
 Pre-compiled hex output on PRUSA RESEARCH site: http://prusa3d.com/downloads/firmware/
