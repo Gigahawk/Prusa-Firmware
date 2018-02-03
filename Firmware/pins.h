@@ -17,10 +17,8 @@
   #ifndef __AVR_ATmega2560__
     #error Oops!  Make sure you have 'Arduino Mega 2560' selected from the 'Tools -> Boards' menu.
   #endif
-  
 
   #define FR_SENS 21
-
 
   #define X_STEP_PIN 37
   #define X_DIR_PIN 48
@@ -44,7 +42,9 @@
   #define TEMP_2_PIN -1
   
 #ifndef DISABLE_MAX_ENDSTOPS
-  #define X_MAX_PIN 30
+//default behavior should use min endstops so im hijacking the x_max pin as the new heater pin
+//  #define X_MAX_PIN 30
+  #define X_MAX_PIN -1
   #define Z_MAX_PIN 23
   #define Y_MAX_PIN 24
 #else
@@ -63,20 +63,15 @@
   #define Z_MIN_PIN -1
 #endif
 
-
 #ifdef SNMM 
-
 #define E_MUX0_PIN 17
 #define E_MUX1_PIN 16
-
-
 #endif
  
 #ifdef DIS
 #define D_REQUIRE 30
 #define D_DATA 20
 #define D_DATACLOCK 21
-
 #endif
 
 // The SDSS pin uses a different pin mapping from file Sd2PinMap.h
@@ -126,7 +121,8 @@
     #define ELECTRONICS "RAMBo13a"
 
     #define HEATER_0_PIN 3
-    #define HEATER_BED_PIN 4
+    //#define HEATER_BED_PIN 4
+	#define HEATER_BED_PIN 30
     #define FAN_1_PIN -1 //6
     #define PS_ON_PIN 71
     #define MOTOR_CURRENT_PWM_XY_PIN 46
@@ -144,7 +140,9 @@
     #define DIGIPOTSS_PIN 38
     #define DIGIPOT_CHANNELS {4,5,3,0,1} // X Y Z E0 E1 digipot channels to stepper driver mapping
     #define HEATER_0_PIN  9
-    #define HEATER_BED_PIN 3
+// Shouldnt ever be used on rambomini but just in case
+//    #define HEATER_BED_PIN 3
+    #define HEATER_BED_PIN 30
     #define PS_ON_PIN          4
     #define SDSS               53
     #ifdef ULTRA_LCD
@@ -205,13 +203,6 @@
     #endif //ULTRA_LCD
   #endif //RAMBo/MiniRambo option
 #endif
-
-
-
-
-
-
-
 
 /*****************************************************************
 * Rambo mini Pin Assignments 1.0
@@ -318,7 +309,9 @@
   #define HEATER_2_PIN -1
 
     #define HEATER_0_PIN 3
-    #define HEATER_BED_PIN 4
+//idk why its defined twice but better safe than sorry
+//    #define HEATER_BED_PIN 4
+    #define HEATER_BED_PIN 30
     #define FAN_1_PIN -1 //6
     #define PS_ON_PIN 71
     #define MOTOR_CURRENT_PWM_XY_PIN 46
