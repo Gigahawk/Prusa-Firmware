@@ -130,7 +130,7 @@ EXTRUDER SETTINGS
 
 #ifdef SNMM
 //#define BOWDEN_LENGTH	408
-#define BOWDEN_LENGTH 433 //default total length for filament fast loading part; max length for extrusion is 465 mm!; this length can be adjusted in service menu
+#define BOWDEN_LENGTH 433+144//default total length for filament fast loading part; max length for extrusion is 465 mm!; this length can be adjusted in service menu
 #define FIL_LOAD_LENGTH 102 //length for loading filament into the nozzle
 #define FIL_COOLING 10 //length for cooling moves
 #define E_MOTOR_LOW_CURRENT 350 // current for PRUSAY code
