@@ -172,7 +172,7 @@
 //can be software-disabled for whatever purposes by
 #define PREVENT_DANGEROUS_EXTRUDE
 //if PREVENT_DANGEROUS_EXTRUDE is on, you can still disable (uncomment) very long bits of extrusion separately.
-#define PREVENT_LENGTHY_EXTRUDE
+//#define PREVENT_LENGTHY_EXTRUDE
 
 #ifdef DEBUG_DISABLE_PREVENT_EXTRUDER
 #undef PREVENT_DANGEROUS_EXTRUDE
